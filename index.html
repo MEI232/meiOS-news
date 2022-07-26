@@ -1,0 +1,37 @@
+<!doctype html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <title>mei232os-2 news</title>
+
+        <!-- Load external CSS styles -->
+        <link rel="stylesheet" href="styles.css">
+
+    </head>
+
+    <body>
+
+        <h1 id="title"> meiOS news</h1>
+        <p id="main">
+            <button onclick="openNews('release1.7')">Release 1.7</button> Published Mon July 25, 20:56<br>
+            <button onclick="openNews('testingNews')">Starting a new news service!</button> Published Mon July 25, 20:33.
+
+        </p>
+        <!-- Load external JavaScript -->
+        <script>
+            function openNews(what){
+            if(what == 'testingNews'){
+            document.getElementById('title').innerHTML = 'Starting a new news service! <button onclick="location.reload()" style="text-decoration: none">Back</a>'
+            document.getElementById('main').innerHTML = 'Hello, we are rolling out this new meiOS news service (Doing only meiOS and realworld breaking news stories)! This news app we will try to update frequently.'
+            }else if(what == 'release1.7'){
+            document.getElementById('title').innerHTML = 'Release 1.7 <button onclick="location.reload()" style="text-decoration: none">Back</a>'
+            document.getElementById('main').innerHTML = 'We have released 1.7! New features: <br><li>Chat filter to make the community better! Enable/Disable <a href="javascript:parent.open(\'settings\')">here</a></li><li>Added a TOS to setup</li>'
+            }
+            }
+        </script>
+        
+    </body>
+
+</html>
